@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainActivity2">
+
+    <fragment
+        android:id="@+id/addTeamFragment"
+        android:name="com.example.ems_apogee2020.View.AddTeamFragment"
+        android:label="fragment_add_team"
+        tools:layout="@layout/fragment_add_team" />
+    <fragment
+        android:id="@+id/membersFragment"
+        android:name="com.example.ems_apogee2020.View.MembersFragment"
+        android:label="fragment_members"
+        tools:layout="@layout/fragment_members">
+        <action
+            android:id="@+id/action_membersFragment_to_addTeamMemberFragment"
+            app:destination="@id/addTeamMemberFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity2"
+        android:name="com.example.ems_apogee2020.View.MainActivity"
+        android:label="MainActivity" />
+    <fragment
+        android:id="@+id/addTeamMemberFragment"
+        android:name="com.example.ems_apogee2020.View.addTeamMemberFragment"
+        android:label="fragment_add_team_member2"
+        tools:layout="@layout/fragment_add_team_member2" />
+</navigation>
